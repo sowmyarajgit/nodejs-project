@@ -10,14 +10,22 @@ pipeline{
 
     //tools {nodejs 'nodejs-16'}
 
+    //stages {
+      //  stage('gitclone') {
+        //    steps {
+          //    git branch: 'main', url: 'https://github.com/sowmyarajgit/nodejs-project.git'  
+            //}
+        //}
+
     stages {
-        stage('gitclone') {
+         
+         stage('gitclone') {
             steps {
               git branch: 'main', url: 'https://github.com/sowmyarajgit/nodejs-project.git'  
             }
         }
 
-    stages {
+
         stage('build') {
             steps{
                 echo "------------ build started ---------"
