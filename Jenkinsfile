@@ -63,12 +63,13 @@ stage(" Docker Build ") {
             }
         }
     }
-    //         stage('Deployment') {
-    //         steps {
-    //             echo '<--------------- deployment started  --------------->'
-    //             sh './deploy.sh'
-    //             echo '<------------- deployment stopped  --------------->'
-    //         }
-    //     }  
+             stage('Deployment') {
+             steps {
+                 echo '<--------------- deployment started  --------------->'
+                 sh './deploy.sh'
+                 echo '<------------- deployment stopped  --------------->'
+             }
+         }  
      }
      }
+ 
